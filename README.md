@@ -1,5 +1,5 @@
 # React Ignite Lab
-![gif do projeto rodando](https://github.com/AlexandreNoguez/only-assets/blob/main/GifRepoFDTE.gif?raw=true)
+![foto do projeto rodando](https://github.com/AlexandreNoguez/ReactIgniteLab/blob/main/client/public/IgniteLab.png?raw=true)
 
 ## Um projeto desenvolvido durante a semana Ignite Lab proporcionado pela Rocketseat!
 ### Esse projeto consiste em desenvolver uma plataforma de vídeos em ReactJS e GrapCMS/GraphQL
