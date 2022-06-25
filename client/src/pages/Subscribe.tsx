@@ -12,7 +12,7 @@ const CREATE_SUBSCRIBER_MUTATION = gql`
 `
 
 const Subscribe: React.FC = () => {
-    const createUserNavigate = useNavigate()
+    const navigate = useNavigate()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
 
@@ -26,8 +26,8 @@ const Subscribe: React.FC = () => {
                 name,
                 email,
             }
-        })
-        createUserNavigate('/event')
+        }),
+            navigate('/event')
     }
     return (
         <div className=' min-h-screen bg-blur bg-cover bg-no-repeat flex flex-col items-center'>
