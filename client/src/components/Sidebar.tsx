@@ -12,15 +12,6 @@ const GET_LESSONS_QUERY = gql`
   }
 }
 `
-const GET_ASSETS_URL = gql`query MyQuery {
-    asset(where: {}) {
-      url
-    }
-  }
-  `
-interface IGetAssets {
-    url: string;
-}
 
 interface IGetLessonsQueryResponse {
     lessons: {
