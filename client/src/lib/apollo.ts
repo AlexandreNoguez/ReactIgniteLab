@@ -1,9 +1,12 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
+const API = import.meta.env.VITE_API_URL;
+const HEADERS = import.meta.env.VITE_API_ACESS_TOKEN;
+
 export const client = new ApolloClient({
-    uri: import.meta.env.VITE_API_URL,
+    uri: API,
     headers: {
-        'Authorization': `Bearer' '${import.meta.env.VITE_API_ACESS_TOKEN}`
+        "Authorization": `Bearer ${HEADERS}`
     },
-    cache: new InMemoryCache()
+    cache: new InMemoryCache(),
 })

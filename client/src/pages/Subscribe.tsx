@@ -1,22 +1,16 @@
-import { gql, useMutation } from '@apollo/client';
+// import { gql, useMutation } from '@apollo/client';
 import React, { useState, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Logo from '../components/Logo';
-
-const CREATE_SUBSCRIBER_MUTATION = gql`
-    mutation CreateSubscriber ($name: String!, $email: String!){
-        createSubscriber(data: {name: $name, email: $email}){
-            id
-        }
-    }
-`
+import { useCreateSubscriberMutation } from '../graphql/generated';
+import imgBlur from '/src/assets/blur.png'
 
 const Subscribe: React.FC = () => {
     const navigate = useNavigate()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
 
-    const [createSubscriber, { loading }] = useMutation(CREATE_SUBSCRIBER_MUTATION)
+    const [createSubscriber, { loading }] = useCreateSubscriberMutation()
 
     async function handleSubscribe(e: FormEvent) {
         e.preventDefault();
@@ -64,7 +58,7 @@ const Subscribe: React.FC = () => {
                 </div>
 
             </div>
-            <img src="/src/assets/blur.png" alt="imagem da plataforma sendo acessada" />
+            <img src={imgBlur} alt="imagem da plataforma sendo acessada" />
         </div>
     )
 }
