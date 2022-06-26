@@ -21,4 +21,4 @@
 * Configurar suas querys no GraphCMS
 * Substituir suas querys do GraphCMS nos components Video.tsx e Sidebar.tsx
 * npm install (Para instalar as dependências)
-* npm start
+* npm run dev
